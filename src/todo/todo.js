@@ -4,4 +4,4 @@ var Person = Backbone.Model.extend({
             name: null
 });
 
-module.exports = Person;
+module.exports = Person; 
