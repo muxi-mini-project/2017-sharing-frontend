@@ -169,9 +169,9 @@ article_id: int //文章id
 }
 ```
 
-#6.个人资料页面
+### 6.个人资料页面
 
-##查看个人资料
+#### 查看个人资料
 URL： /api/v1.0/userdata/<user_id>
 method : GET
 描述 点击一个人的头像可以看他的个人资料
@@ -187,7 +187,7 @@ description： string //自我介绍
 ```
 
 
-### 修改个人资料
+#### 修改个人资料
 URL：``/api/v1.0/userdata/<user_id>/change/``</br>
 method: PUSH</br>
 
