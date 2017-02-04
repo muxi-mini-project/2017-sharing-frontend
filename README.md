@@ -21,9 +21,9 @@
 
 # 同步路由
 ### 1.用户注册
-Page:注册页面
-URL: ``/api/v1.0/signup/``
-method:POST
+Page:注册页面</br>
+URL: ``/api/v1.0/signup/`` </br>
+method:POST </br>
 描述：注册一个用户,注册完成后进入 浏览内容页面
 
 input data:
@@ -44,10 +44,10 @@ return :
 ```
 
 ### 2.用户登录
-Page:登录页面
-URL:``/api/v1.0/login/``
-method:GET
-permission: username:password
+Page:登录页面</br>
+URL:``/api/v1.0/login/``</br>
+method:GET</br>
+permission: username:password</br>
 描述：登录
 
 return data:
@@ -59,39 +59,146 @@ return data:
 ```
 
 ### 3.主页面
-URL：``/api/v1.0/feed/``
-+ **趣分享**
-URL：``/api/v1.0/feed/share/``
-描述：文章类型为分享型的Timeline
-+ **博主原创**
-URL: ``/api/v1.0/feed/original/``
-描述：文章类型为原创型的Timeline
-+ **去分享**
-URL: ``/api/v1.0/feed/toshare/``
-描述：重定向至 **发布内容页面**
+#### 主页面
+URL：``/api/v1.0/feed/share``</br>
+method :GET</br>
+描述：默认为趣分享页面
+
+return：
+```
+user_name:string //用户名
+user_portrait: string //头像URL
+article_id:int //文章id
+```
+
+#### 导航栏
++ **趣分享** </br>
+URL：``/api/v1.0/feed/share/``</br>
+method：GET</br>
+return:
+```
+{
+article_id:int //文章id
+}
+```
+描述：文章类型为分享型的Timeline</br></br>
++ **博主原创**</br>
+URL: ``/api/v1.0/feed/original/``</br>
+method：GET</br>
+return:
+```
+{
+article_id:int //文章id
+}
+```
+描述：文章类型为原创型的Timeline</br></br>
++ **去分享**</br>
+URL: ``/api/v1.0/feed/toshare/``</br>
+描述：重定向至 **发布内容页面**</br></br>
+
+
 
 ### 4.具体文章页面
-<分享型>
-URL: ``/api/v1.0/feed/share/<articleid>``
-<原创型>
-URL: ``/api/v1.0/feed/original/<articleid>``
+#### 文章页面
+URL : ``/api/v1.0/feed/<article_id>``</br>
+method： GET</br>
+描述：某篇文章的页面</br>
 
+return：
+```
+{
+user_id:int //发布者id
+article:string //发布的内容
+comment_id:int //评论id
+comment:string //评论内容
+}
+```
+
+#### 删除文章
+URL:`` /api/v1.0/feed/<article_id>/delect/`` </br>
+method: POST</br>
+input :
+```
+article_id: string
+user_id: string
+```
+
+
+#### 发布评论
+URL : ``/api/v1.0/feed/<article_id>/comment/ ``</br>
+method:  GET POST</br>
+
+input:
+```
+user_id:int //评论者id
+comment:string //评论内容
+```
+
+return：
+```
+{
+user_id:int //评论者id
+user_portrait:string //评论者头像URL
+comment_id:int //评论id
+}
+```
+
+#### 删除评论
+URL： ``/api/v1.0/feed/<article_id>/rmcomment/``</br>
+method: POST</br>
+input
+```
+comment_id: string
+user_id: string
+```
 ### 5.发表文章页面
-Page:发布内容页面
-URL：``/api/v1.0/issue/``
-method: POST
-描述：用富文本编辑器？发布文章
+Page:发布内容页面</br>
+URL：``/api/v1.0/toshare/``</br>
+method: GET POST</br>
+描述：用编辑器编辑、发布文章</br>
 input:
 
 ```
-article:string
+user_id:string //用户id
+article:string //内容
 ```
 return:
 ```
 {
-"create":articleid
+article_id: int //文章id
 }
 ```
 
+#6.个人资料页面
+
+##查看个人资料
+URL： /api/v1.0/userdata/<user_id>
+method : GET
+描述 点击一个人的头像可以看他的个人资料
+return：
+```
+{
+user_portrait:string //头像URL
+username:string
+email:string
+gender:string //性别
+description： string //自我介绍
+}
+```
+
+
+### 修改个人资料
+URL：``/api/v1.0/userdata/<user_id>/change/``</br>
+method: PUSH</br>
+
+input:
+```
+user_id: int
+user_portrait:string //头像URL
+username:string
+password:string //密码
+gender:string //性别
+description： string //自我介绍
+```
 ---
-路由待补充
+路由待?补充--- > 感谢张可昨晚写的API！！！
