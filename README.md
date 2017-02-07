@@ -172,9 +172,9 @@ article_id: int //文章id
 ### 6.个人资料页面
 
 #### 查看个人资料
-URL： /api/v1.0/userdata/<user_id>
-method : GET
-描述 点击一个人的头像可以看他的个人资料
+URL： /api/v1.0/userdata/<user_id></br>
+method : GET</br>
+描述: 点击一个人的头像可以看他的个人资料</br>
 return：
 ```
 {
@@ -201,4 +201,4 @@ gender:string //性别
 description： string //自我介绍
 ```
 ---
-路由待?补充--- > 感谢张可昨晚写的API！！！
+感谢张可提供API。
