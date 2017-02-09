@@ -8,7 +8,7 @@
 		},
 		{
 			"name":"second",
-			"endpoint":"/",
+			"endpoint":"/second",
 			"template":"second",
 			"async": false
 		}
