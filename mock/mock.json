@@ -9,8 +9,7 @@
 		{
 			"name":"second",
 			"endpoint":"/second",
-			"template":"second",
-			"async": false
+			"async": true
 		}
 	],
 	"data":{
