@@ -5,6 +5,12 @@
 			"endpoint": "/",
 			"template": "home",
 			"async": false
+		},
+		{
+			"name":"second",
+			"endpoint":"/",
+			"template":"second",
+			"async": false
 		}
 	],
 	"data":{
