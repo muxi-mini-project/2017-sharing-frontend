@@ -4,7 +4,7 @@
 
 
 | 路由| URL | 描述 | 模板
-| :------| :------ | :------|
+| ------| ------ | ------|
 | /signup | /signup    | 注册页面    | signup.html
 | /login | /login     | 登录页面    | login.html
 | /share | /feed/share|主页面-趣分享 | share.html
