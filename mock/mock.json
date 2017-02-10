@@ -10,6 +10,65 @@
 			"name" : "second",
 			"endpoint": "/second",
 			"async": true
+		},
+		{
+			"name" : "signup",
+			"endpoint": "/",
+			"template": "signup",
+			"async": false
+		},
+		{
+			"name" : "login",
+			"endpoint": "/",
+			"template": "login",
+			"async": false
+		},
+		{
+			"name" : "toshare",
+			"endpoint": "/",
+			"template": "toshare",
+			"async": false
+		},
+		{
+			"name" : "feed",
+			"endpoint": "/",
+			"template": "feed",
+			"async": false
+		},
+  	{
+		"name" : "original",
+		"endpoint": "/original",
+		"async": true
+	  },
+		{
+			"name" : "api.article",
+			"endpoint": "/api/v1.0/feed/<article_id>",
+			"async": true
+		},
+		{
+			"name" : "api.delete_article",
+			"endpoint": "/api/v1.0/feed/<article_id>/delect/",
+			"async": true
+		},
+		{
+			"name" : "api.comment",
+			"endpoint": "/api/v1.0/feed/<article_id>/comment/",
+			"async": true
+		},
+		{
+			"name" : "api.rmcomment",
+			"endpoint": "/api/v1.0/feed/<article_id>/rmcomment/",
+			"async": true
+		},
+		{
+			"name" : "api.userdata",
+			"endpoint": "/api/v1.0/userdata/<user_id>",
+			"async": true
+		},
+		{
+			"name" : "api.userdata_change",
+			"endpoint": "/api/v1.0/userdata/<user_id>/change/",
+			"async": true
 		}
 	],
 	"data":{
