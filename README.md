@@ -1,6 +1,23 @@
 # 2017-sharing-frontend
 趣分享-前端仓库
 
+
+
+| 路由| URL | 描述 | 模板
+| :------| :------ | :------|
+| /signup | /signup    | 注册页面    | signup.html
+| /login | /login     | 登录页面    | login.html
+| /share | /feed/share|主页面-趣分享 | share.html
+| /original | /feed/original| 原创页面 |original.html
+| /toshare | /toshare   |发布页面-去分享|toshare.html
+| /article | /feed/<article_id>| 具体文章 |article.html
+| /delete_article | /feed/<article_id>/delect|删除文章|delete_article.html
+| /comment | /feed/<article_id>/comment|发布评论|comment.html
+| /rmcomment | /feed/<article_id>/rmcomment|删除评论|rmcomment.html
+| /userdata | /userdata/<user_id>|查看个人资料|userdata.html
+| /userdata_change | /userdata/<user_id>/change/|修改个人资料|userdata_change.html
+
+
 # 页面分类
 * 注册页面
 * 登录页面
@@ -93,7 +110,7 @@ article_id:int //文章id
 ```
 描述：文章类型为原创型的Timeline</br></br>
 + **去分享**</br>
-URL: ``/api/v1.0/feed/toshare/``</br>
+URL: ``/api/v1.0/toshare/``</br>
 描述：重定向至 **发布内容页面**</br></br>
 
 
@@ -172,7 +189,7 @@ article_id: int //文章id
 ### 6.个人资料页面
 
 #### 查看个人资料
-URL： /api/v1.0/userdata/<user_id></br>
+URL：`` /api/v1.0/userdata/<user_id></br>``
 method : GET</br>
 描述: 点击一个人的头像可以看他的个人资料</br>
 return：
