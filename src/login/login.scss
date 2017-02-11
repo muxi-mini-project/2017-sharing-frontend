@@ -1,6 +1,4 @@
-button{
-  color: red;
-}
+
 html,body{
   height: 100%;
 }
@@ -10,10 +8,11 @@ html,body{
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: center;
 }
 .login_picture{
-  width: 400px;
-  height: 300px;
+  width: 370px;
+  height: 280px;
   background-color: white;
   opacity: 0.9;
   text-align: center;
@@ -24,8 +23,33 @@ html,body{
 .logo{
   width:100%;
   position: absolute;
-  height: 300px;
+  height: 200px;
   background-image: url("http://p1.bqimg.com/567571/5b5e1e942a627e8b.png");
   background-repeat: no-repeat;
   background-position: center;
+}
+.fx{
+  color: white;
+  width:100%;
+  position: absolute;
+  font-size: 18px;
+  line-height: 350px;
+}
+.group{
+  font-size: 25px;
+  font-family: cursive;
+  padding-top: 30px;
+}
+button{
+  font-size: 18px;
+  margin-top: 30px;
+  background-color: #669966;
+  color: white;
+  border-style: none;
+}
+.input{
+  display: inline-block;
+  height: 30px;
+  width: 200px;
+  border:#cccccc 2px  solid;
 }
