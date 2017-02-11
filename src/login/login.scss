@@ -1,0 +1,31 @@
+button{
+  color: red;
+}
+html,body{
+  height: 100%;
+}
+.container{
+  background-image: url("http://p1.bqimg.com/567571/f0d91cdbc9244147.png");
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.login_picture{
+  width: 400px;
+  height: 300px;
+  background-color: white;
+  opacity: 0.9;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: calc(50% - 100px);
+}
+.logo{
+  width:100%;
+  position: absolute;
+  height: 300px;
+  background-image: url("http://p1.bqimg.com/567571/5b5e1e942a627e8b.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}

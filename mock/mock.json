@@ -7,31 +7,26 @@
 			"async": false
 		},
 		{
-			"name" : "second",
-			"endpoint": "/second",
-			"async": true
-		},
-		{
 			"name" : "signup",
-			"endpoint": "/",
+			"endpoint": "/signup",
 			"template": "signup",
 			"async": false
 		},
 		{
 			"name" : "login",
-			"endpoint": "/",
+			"endpoint": "/login",
 			"template": "login",
 			"async": false
 		},
 		{
 			"name" : "toshare",
-			"endpoint": "/",
+			"endpoint": "/toshare",
 			"template": "toshare",
 			"async": false
 		},
 		{
 			"name" : "feed",
-			"endpoint": "/",
+			"endpoint": "/feed",
 			"template": "feed",
 			"async": false
 		},
