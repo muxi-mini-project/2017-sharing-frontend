@@ -36,12 +36,13 @@ html,body{
   line-height: 350px;
 }
 .group{
-  font-size: 25px;
+  font-size: 22px;
   font-family: cursive;
   padding-top: 30px;
+  box-sizing: border-box;
 }
 button{
-  font-size: 18px;
+  font-size: 20px;
   margin-top: 30px;
   background-color: #669966;
   color: white;
@@ -49,7 +50,15 @@ button{
 }
 .input{
   display: inline-block;
-  height: 30px;
+  height: 34px;
   width: 200px;
   border:#cccccc 2px  solid;
+}
+.zhmm{
+  display: inline-block;
+  border: #cccccc 2px solid;
+  height: 38px;
+  padding: 1px 7px;
+  box-sizing: border-box;
+  vertical-align: top;//对齐
 }
