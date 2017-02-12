@@ -7,7 +7,7 @@ var template = require("./index.html");
 
 
 var loginView = Backbone.View.extend({
-            el: $(".card"),
+            el: $(".avatar"),
             template:_.template(template),
             initialize: function () {
               this.render();

@@ -1,0 +1,36 @@
+@import '../feed/feed.scss';
+@import './header.scss';
+.container{
+  background-color: #99cc33;
+  width: 100%;
+  height: 50px;
+}
+.feedlogo{
+  background-image: url("http://i1.piimg.com/567571/fcc1dc498a869400.png");
+  margin-left: 88px;
+  width: 100px;
+  height: 50px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: left;
+  vertical-align: top;
+}
+.box{
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  width: 245px;
+  height: 50px;
+}
+.a{
+  display: inline-block;
+  font-size: 20px;
+  color: white;
+  text-decoration:none;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding-top: 15px;
+}
+div.box:hover{
+  background-color: #669933;
+}
