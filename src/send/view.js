@@ -10,14 +10,23 @@ var loginView = Backbone.View.extend({
             el: $(".ground"),
             template:_.template(template),
             initialize: function () {
+              this.model = new feedModel()
+              this.listenTo(this.model, "sync", this.onLogin)
               this.render();
               console.log('init');
             },
             events: {
-                "click .s":"loginIn",
+                "click .submit":"loginIn",
             },
-            loginIn: function () {
-              
+            onLogin: function(){
+                location.href = "/feed"
+            },
+            loginIn: function (e) {
+                e.preventDefault();
+                this.model.set("input",$(".input").val())
+                this.model.set("text",$(".text").val())
+                console.log(this.model)
+                this.model.save()
             },
             render: function(){
               this.$el.html(this.template());
