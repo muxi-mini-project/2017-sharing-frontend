@@ -6,6 +6,7 @@ module.exports = {
     entry: {
         'login.js': ['./src/login.js', 'webpack-hot-middleware/client'],
         'feed.js': ['./src/feed.js', 'webpack-hot-middleware/client'],
+        'toshare.js': ['./src/toshare.js', 'webpack-hot-middleware/client'],
         vendor: ["Backbone", "underscore", "jquery", "./src/style/reset.scss"]
     },
     output: {

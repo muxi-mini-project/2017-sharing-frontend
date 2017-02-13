@@ -1,7 +1,5 @@
 var Backbone = require("Backbone");
-var view = require('./feed/view.js');
-
-require('./style/feed.scss');
+var view = require('./big/view.js');
 
 
 var feedView = new view();
