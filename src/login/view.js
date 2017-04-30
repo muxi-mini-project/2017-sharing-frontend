@@ -10,8 +10,8 @@ var loginView = Backbone.View.extend({
             el: $(".login_component"),
             template:_.template(template),
             initialize: function () {
-              this.model = new loginModel()
-              this.listenTo(this.model, "sync", this.onLogin)
+              this.model = new loginModel();
+              this.listenTo(this.model, "sync", this.onLogin);
               this.render();
               console.log('init');
               // var path = false;
@@ -43,12 +43,11 @@ var loginView = Backbone.View.extend({
             loginIn: function(e){
                 e.preventDefault();
                 if (this.check()) {
-                    this.model.set("username",$(".username").val())
+                    this.model.set("email",$(".email").val())
                     this.model.set("password",$(".password").val())
                     console.log(this.model)
                     this.model.save()
                 }
-                this.onLogin()
             },
             render: function(){
               this.$el.html(this.template());

@@ -23,8 +23,9 @@ var loginView = Backbone.View.extend({
             },
             loginIn: function (e) {
                 e.preventDefault();
-                this.model.set("input",$(".input").val())
-                this.model.set("text",$(".text").val())
+                //this.model.set("input",$(".input").val())
+                this.model.set("body",$(".text").val())
+                this.model.set("post_type","share")
                 console.log(this.model)
                 this.model.save()
             },
